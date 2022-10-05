@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>goit-markup-hw-05</title>
+		<title>goit-markup-hw-06</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -78,12 +78,66 @@
 								<use href="./images/icons.svg#icon-close-black"></use>
 							</svg>
 						</button>
+						<form class="register-form" name="register-form">
+							<strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
+							<div class="register-form-group" role="group">
+								<label class="register-form-field">
+									<span class="register-form-label">Ім'я</span>
+									<input class="register-form-input" type="text" name="user-name" required placeholder="&nbsp;" />
+									<svg class="register-form-icon" width="18" height="18">
+										<use href="./images/icons.svg#icon-person-black"></use>
+									</svg>
+								</label>
+								<label class="register-form-field">
+									<span class="register-form-label">Телефон</span>
+									<input class="register-form-input" type="tel" name="tel" required placeholder="&nbsp;" />
+									<svg class="register-form-icon" width="18" height="18">
+										<use href="./images/icons.svg#icon-phone-black"></use>
+									</svg>
+								</label>
+								<label class="register-form-field">
+									<span class="register-form-label">Пошта</span>
+									<input class="register-form-input" type="email" name="email" required placeholder="&nbsp;" />
+									<svg class="register-form-icon" width="18" height="18">
+										<use href="./images/icons.svg#icon-email-black"></use>
+									</svg>
+								</label>
+								<label class="register-form-field">
+									<span class="register-form-label">Коментар</span>
+									<textarea
+										class="register-form-message"
+										name="comment"
+										id=""
+										rows="5"
+										placeholder="Введіть текст"
+									></textarea>
+								</label>
+							</div>
+							<label class="register-form-agreement">
+								<input
+									class="register-form-checkbox visually-hidden"
+									type="checkbox"
+									name="user-check"
+									required
+									checked
+								/>
+								<svg class="register-form-icons" width="16" height="15">
+									<use class="icon-chek" href="./images/icons.svg#icon-icon-check"></use>
+									<use class="icon-unchek" href="./images/icons.svg#icon-uncheck"></use>
+								</svg>
+								<span class="register-form-desc">
+									Погоджуюся з розсилкою та приймаю
+									<a class="register-form-link" href="" target="_blank">Умови договору</a>
+								</span>
+							</label>
+							<button class="register-form-btn" type="submit">Відправити</button>
+						</form>
 					</div>
 				</div>
 			</section>
 
 			<!-- секция особенности -->
-			<section class="section padding-null">
+			<section class="section">
 				<div class="container">
 					<h2 class="visually-hidden">Особенности</h2>
 
@@ -130,7 +184,7 @@
 				</div>
 			</section>
 			<!-- секция чем мы занимаемся -->
-			<section class="section">
+			<section class="section padding-null">
 				<div class="container">
 					<h2 class="section-title">Чим ми займаємося</h2>
 					<ul class="list work">
@@ -434,7 +488,7 @@
 						</ul>
 					</div>
 					<div>
-						<h2 class="soc-link-title">приєднуйтесь</h2>
+						<p class="soc-link-title">приєднуйтесь</p>
 
 						<ul class="soc-link-list list">
 							<li class="soc-link-item">
@@ -466,6 +520,19 @@
 								</a>
 							</li>
 						</ul>
+					</div>
+
+					<div class="subscription">
+						<form name="subscription">
+							<strong class="sub-title">Підпишіться на розсилку</strong>
+							<label class="subscription-form">
+								<input class="sub-field" type="email" name="email" placeholder="E-mail" />
+								<button class="sub-btn" type="submit">
+									Підписатися
+									<svg width="24" height="24"><use href="./images/icons.svg#icon-icon-send"></use></svg>
+								</button>
+							</label>
+						</form>
 					</div>
 				</div>
 			</footer>
