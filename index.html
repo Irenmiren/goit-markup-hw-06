@@ -113,13 +113,7 @@
 								</label>
 							</div>
 							<label class="register-form-agreement">
-								<input
-									class="register-form-checkbox visually-hidden"
-									type="checkbox"
-									name="user-check"
-									required
-									checked
-								/>
+								<input class="register-form-checkbox visually-hidden" type="checkbox" name="user-check" required />
 								<svg class="register-form-icons" width="16" height="15">
 									<use class="icon-chek" href="./images/icons.svg#icon-icon-check"></use>
 									<use class="icon-unchek" href="./images/icons.svg#icon-uncheck"></use>
@@ -486,7 +480,7 @@
 							<li class="item"><a href="tel:+380961111111" class="link list">+38 096 111 11 11</a></li>
 						</ul>
 					</div>
-					<div>
+					<div class="social">
 						<p class="soc-link-title">приєднуйтесь</p>
 
 						<ul class="soc-link-list list">
@@ -522,15 +516,15 @@
 					</div>
 
 					<div class="subscription">
-						<form name="subscription">
-							<strong class="sub-title">Підпишіться на розсилку</strong>
-							<label class="subscription-form">
+						<strong class="sub-title">Підпишіться на розсилку</strong>
+						<form class="subscription-form" name="subscription-form">
+							<label class="subscription-input">
 								<input class="sub-field" type="email" name="email" placeholder="E-mail" />
-								<button class="sub-btn" type="submit">
-									Підписатися
-									<svg width="24" height="24"><use href="./images/icons.svg#icon-icon-send"></use></svg>
-								</button>
 							</label>
+							<button class="sub-btn" type="submit">
+								Підписатися
+								<svg width="24" height="24"><use href="./images/icons.svg#icon-icon-send"></use></svg>
+							</button>
 						</form>
 					</div>
 				</div>

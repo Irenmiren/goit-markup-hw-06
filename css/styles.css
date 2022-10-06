@@ -319,6 +319,7 @@ img {
 	transform: translate(-50%, -50%) scale(1);
 	width: 528px;
 	height: 581px;
+	padding: 40px;
 
 	opacity: 1;
 	transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1), opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -346,10 +347,6 @@ img {
 	cursor: pointer;
 }
 
-.register-form {
-	padding: 40px;
-}
-
 .register-form-group {
 	margin-bottom: 18px;
 }
@@ -370,8 +367,6 @@ img {
 .register-form-field {
 	position: relative;
 	display: block;
-
-	/* margin-bottom: 10px; */
 }
 
 .register-form-field:not(:last-child) {
@@ -393,6 +388,7 @@ img {
 }
 
 .register-form-input {
+	display: block;
 	width: 100%;
 	height: 40px;
 	padding-left: 42px;
@@ -459,7 +455,7 @@ img {
 	opacity: 1;
 }
 
-.con-unchek {
+.icon-unchek {
 	opacity: 1;
 	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -475,7 +471,6 @@ img {
 }
 
 .register-form-link {
-	text-decoration: underline;
 	color: var(--accent-color);
 }
 
@@ -788,16 +783,8 @@ img {
 	padding: 20px 24px;
 }
 
-.card-project {
+.card-wrap {
 	max-width: 370px;
-	transition-property: box-shadow;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-project:hover,
-.card-project:focus {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-project {
@@ -844,8 +831,20 @@ img {
 	padding: 63px 24px;
 }
 
-.item-card:hover .overlay,
-.item-card:focus .overlay {
+.card-project {
+	display: block;
+	transition-property: box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-project:focus,
+.card-project:hover {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-project:hover .overlay,
+.card-project:focus .overlay {
 	transform: translateY(0);
 }
 
@@ -913,12 +912,7 @@ img {
 .footer-wrap {
 	display: flex;
 
-	/* justify-content: space-between; */
 	align-items: baseline;
-}
-
-.contacts-footer {
-	margin-right: 70px;
 }
 
 .address {
@@ -930,6 +924,14 @@ img {
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	margin-bottom: 9px;
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address:focus,
+.address:hover {
+	color: var(--accent-color);
 }
 
 .logo-footer {
@@ -939,10 +941,22 @@ img {
 
 .contacts-nav.bottom .link {
 	color: rgba(255, 255, 255, 0.6);
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-nav.bottom .link:focus,
+.contacts-nav.bottom .link:hover {
+	color: var(--accent-color);
 }
 
 .contacts-nav.bottom .item:not(:last-child) {
 	margin-bottom: 9px;
+}
+
+.social {
+	margin-left: 70px;
 }
 
 .soc-link-title {
@@ -991,14 +1005,7 @@ img {
 /* підписка */
 
 .subscription {
-	display: flex;
-	align-items: center;
 	margin-left: auto;
-}
-
-.subscription-form {
-	display: flex;
-	justify-content: center;
 }
 
 .sub-title {
@@ -1014,6 +1021,12 @@ img {
 	margin-bottom: 20px;
 }
 
+.subscription-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .sub-field {
 	width: 358px;
 	height: 50px;
@@ -1023,6 +1036,7 @@ img {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	/* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
 	border-radius: 4px;
+	display: block;
 
 	font-family: inherit;
 	font-style: normal;
@@ -1031,7 +1045,17 @@ img {
 	line-height: 1.25;
 	letter-spacing: 0.03em;
 	color: rgba(255, 255, 255, 0.6);
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.sub-field:focus,
+.sub-field:hover {
+	border-color: var(--accent-color);
+}
+
 .sub-btn {
 	width: 200px;
 	height: 50px;
@@ -1042,7 +1066,6 @@ img {
 	border: none;
 	font-family: inherit;
 	cursor: pointer;
-	display: inline-block;
 
 	font-style: normal;
 	font-weight: 700;
@@ -1055,4 +1078,13 @@ img {
 	letter-spacing: 0.06em;
 	color: var(--contact-footer-color);
 	padding: 10px 28px;
+
+	transition-property: color, background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sub-btn:focus,
+.sub-btn:hover {
+	background-color: var(--button-hero-hover);
 }
